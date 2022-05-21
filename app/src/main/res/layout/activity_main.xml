@@ -38,7 +38,7 @@
         android:layout_height="87dp"
         android:layout_marginBottom="54dp"
         android:background="@drawable/custom_btn"
-        android:text="LEARN"
+        android:text="LEARN!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
