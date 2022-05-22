@@ -10,38 +10,46 @@
 
     <Button
         android:id="@+id/repobtn"
-        android:layout_width="87dp"
-        android:layout_height="87dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="108dp"
-        android:background="@drawable/custom_btn"
+        android:background="@drawable/btndesign3"
         android:hapticFeedbackEnabled="true"
         android:radius="34dp"
         android:text="REPO"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/learnbtn"
         app:rippleColor="#F8F8F8" />
 
     <Button
         android:id="@+id/quizbtn"
-        android:layout_width="87dp"
-        android:layout_height="87dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="108dp"
-        android:background="@drawable/custom_btn"
+        android:background="@drawable/btndesign3"
         android:hapticFeedbackEnabled="true"
         android:text="QUIZ"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/learnbtn" />
 
     <Button
         android:id="@+id/learnbtn"
-        android:layout_width="87dp"
-        android:layout_height="87dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="54dp"
-        android:background="@drawable/custom_btn"
+        android:background="@drawable/btndesign3"
         android:hapticFeedbackEnabled="true"
         android:text="LEARN"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

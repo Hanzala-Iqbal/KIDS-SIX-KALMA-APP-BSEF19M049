@@ -3,6 +3,7 @@ package com.example.kidsappbsef19m049;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,24 +23,40 @@ public class MainActivity extends AppCompatActivity {
         repo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "REPO!", Toast.LENGTH_SHORT).show();
+                torepo();
             }
         });
 
         learn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeActivity();
+                toLearn();
+            }
+        });
+
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toquiz();
             }
         });
     }
-        private void changeActivity()
+        private void toLearn()
         {
             Intent intent = new Intent(this,Six_Kalmas.class);
             startActivity(intent);
         }
 
+        private void torepo()
+        {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://github.com/Hanzala-Iqbal/KIDS-SIX-KALMA-APP-BSEF19M049/tree/master")));
+        }
 
-
+        private void toquiz()
+        {
+            Intent intent = new Intent(this,Six_Kalmas.class);
+            startActivity(intent);
+        }
 
 }
