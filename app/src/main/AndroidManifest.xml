@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIDSAPPBSEF19M049">
         <activity
+            android:name=".Second_Kalma"
+            android:exported="false" />
+        <activity
+            android:name=".First_Kalma"
+            android:exported="false" />
+        <activity
             android:name=".Six_Kalmas"
             android:exported="false" />
         <activity
