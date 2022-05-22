@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         private void toquiz()
         {
-            Intent intent = new Intent(this,Six_Kalmas.class);
+            Intent intent = new Intent(this,QuizActivity.class);
             startActivity(intent);
         }
 
