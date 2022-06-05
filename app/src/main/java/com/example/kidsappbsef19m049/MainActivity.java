@@ -15,7 +15,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    Button repo, learn, quiz;
     ListView mainScreenList;
 
     @Override

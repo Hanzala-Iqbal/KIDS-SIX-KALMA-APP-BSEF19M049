@@ -3,70 +3,61 @@ package com.example.kidsappbsef19m049;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Six_Kalmas extends AppCompatActivity {
-    Button first,second,third,fourth,fifth,sixth;
+
+    ListView sixKalmaScreenList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_six_kalmas);
 
-        first = findViewById(R.id.kalma1btn);
-        second = findViewById(R.id.kalma2btn);
-        third = findViewById(R.id.kalma3btn);
-        fourth = findViewById(R.id.kalma4btn);
-        fifth = findViewById(R.id.kalma5btn);
-        sixth = findViewById(R.id.kalma6btn);
+        sixKalmaScreenList = (ListView) findViewById(R.id.sixKalmaList);
+        ArrayList<String> KalmaList = new ArrayList<String>();
+        KalmaList.add("FIRST KALMA");
+        KalmaList.add("SECOND KALMA");
+        KalmaList.add("THIRD KALMA");
+        KalmaList.add("FOURTH KALMA");
+        KalmaList.add("FIFTH KALMA");
+        KalmaList.add("SIXTH KALMA");
 
-        first.setOnClickListener(new View.OnClickListener() {
+        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,KalmaList);
+        sixKalmaScreenList.setAdapter(arrayAdapter);
+
+        sixKalmaScreenList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                changeActivity1();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    changeActivity1();
+                }
+                if (position == 1) {
+                    changeActivity2();
+                }
+                if (position == 2) {
+                    changeActivity3();
+                }
+                if (position == 3) {
+                    changeActivity4();
+                }
+                if (position == 4) {
+                    changeActivity5();
+                }
+                if (position == 5) {
+                    changeActivity6();
+                }
             }
         });
-        second.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeActivity2();
-            }
-
-        });
-        third.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeActivity3();
-            }
-
-        });
-        fourth.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeActivity4();
-                    }
-
-                });
-        fifth.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeActivity5();
-                    }
-
-                });
-        sixth.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeActivity6();
-                    }
-
-                });
-
     }
-
-
 
     private void changeActivity1()
     {
